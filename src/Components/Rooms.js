@@ -16,10 +16,8 @@ function Rooms() {
 		else if (category  === 'all'){
 			filteredRoom=filterRoom;
 		}
-		console.log(filteredRoom)
 		return setRoom(filteredRoom);
 	}
-	console.log(room)
 	const fetchRoom = async ()=>{
 		const res = await axios.get('/room/list')
 		if (res.data){

@@ -21,11 +21,9 @@ function Book() {
             if(!values.message){
                 errors.message = 'Enter a message'
             }
-            console.log(errors)
             return errors
         },
         onSubmit:(values,onSubmitProps)=>{
-        console.log(values)
         onSubmitProps.setSubmitting(false)
         onSubmitProps.resetForm()
         alert('Your Message is Submitted')

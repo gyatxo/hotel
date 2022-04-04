@@ -3,17 +3,17 @@ import axios from '../../api/axios'
 
 
 function EditRoom(props) {
-console.log(props)
+    
 let {roomId,token} = props
     const formik = useFormik({
         initialValues:{
-            title:props.title,
-            price:props.price,
-            capacity:props.capacity,
-            bedSize:props.bedSize,
-            totalRoom:props.totalRoom,
-            image:props.image,
-            category:props.capacity
+            title:props.room.title,
+            price:props.room.price,
+            capacity:props.room.capacity,
+            bedSize:props.room.bedSize,
+            totalRoom:props.room.totalRoom,
+            image:props.room.image,
+            category:props.room.capacity
         },
         validate:values=>{
             let errors = {}
@@ -48,7 +48,7 @@ let {roomId,token} = props
                 
           }
             catch (err){
-              console.log(err)
+              alert(err)
             }
             onSubmitProps.setSubmitting(false)
             onSubmitProps.resetForm()

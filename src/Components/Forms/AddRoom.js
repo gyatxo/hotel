@@ -41,16 +41,13 @@ function AddRoom({token}) {
         },
         onSubmit: async (values, onSubmitProps) => {
             try{
-                const response = await axios.post('/room/save',{
+                await axios.post('/room/save',{
                     headers:{"authorization":"Bearer "+token}
                 }, values)
-                if(response){
-                    
-                    console.log(values)
-                }
+                
           }
             catch (err){
-              console.log(err)
+              alert(err)
             }
             onSubmitProps.setSubmitting(false)
             onSubmitProps.resetForm()
