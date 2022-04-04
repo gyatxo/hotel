@@ -2,17 +2,18 @@ import { useFormik } from 'formik'
 import axios from '../../api/axios'
 
 
-function EditRoom({roomId,title,price,capacity,bedSize,totalRoom,image,category,token}) {
-
+function EditRoom(props) {
+console.log(props)
+let {roomId,token} = props
     const formik = useFormik({
         initialValues:{
-            title,
-            price,
-            capacity,
-            bedSize,
-            totalRoom,
-            image,
-            category
+            title:props.title,
+            price:props.price,
+            capacity:props.capacity,
+            bedSize:props.bedSize,
+            totalRoom:props.totalRoom,
+            image:props.image,
+            category:props.capacity
         },
         validate:values=>{
             let errors = {}

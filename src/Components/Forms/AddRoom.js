@@ -95,7 +95,7 @@ function AddRoom({token}) {
         {formik.touched.totalRoom && formik.errors.totalRoom? <div className='errors'>{formik.errors.totalRoom}</div>:null}
         <div >
             <label  className="col-sm-2">Image</label>
-            <input type="text" className="form-control col-sm-6" name='image' onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.image} />
+            <input type="file" className="form-control col-sm-6" name='image' onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.image} />
         </div>
         {formik.touched.image && formik.errors.image? <div className='errors'>{formik.errors.image}</div>:null}
         <div >

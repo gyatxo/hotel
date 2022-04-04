@@ -22,7 +22,6 @@ function Login() {
             return errors
         },
         onSubmit: async (values, onSubmitProps) => {
-          console.log(values)
           try{
             const response = await axios.post('/auth/login',values)
             // console.log(response.data.token)
